@@ -1140,57 +1140,27 @@ architecture.<br>
         </section>
 
         <section class="contact-form">
-  <h3 class="h3 form-title">Contact Form</h3>
 
-  <form id="contactForm" class="form" data-form>
-    <div class="input-wrapper">
-      <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-      <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-    </div>
+          <h3 class="h3 form-title">Contact Form</h3>
 
-    <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+          <form action="#" class="form" data-form>
 
-    <button class="form-btn" type="submit" enabled data-form-btn>
-      <ion-icon name="paper-plane"></ion-icon>
-      <span>Send Message</span>
-    </button>
-  </form>
-</section>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
 
-<script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbx0InkLYSumJbX2LklXqV-vokGg-Og6WGU0UT9qCtFiOvUBlXRCnwPFnWuL25R-MA3u/exec"; // Replace with your actual Apps Script URL
-  const form = document.getElementById("contactForm");
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-    const formData = {
-      fullname: form.fullname.value,
-      email: form.email.value,
-      message: form.message.value
-    };
+            <button class="form-btn" type="submit" enabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
 
-    try {
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
+          </form>
 
-      if (response.ok) {
-        alert("✅ Message sent successfully!");
-        form.reset();
-      } else {
-        alert("❌ Error sending message. Please try again.");
-      }
-    } catch (error) {
-      alert("⚠️ Something went wrong. Please check your internet connection or try again.");
-      console.error("Error:", error);
-    }
-  });
-</script>
+        </section>
 
       </article>
 
