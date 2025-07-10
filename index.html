@@ -1140,27 +1140,22 @@ architecture.<br>
         </section>
 
         <section class="contact-form">
+  <h3 class="h3 form-title">Contact Form</h3>
 
-          <h3 class="h3 form-title">Contact Form</h3>
+  <form id="contactForm" class="form" data-form>
+    <div class="input-wrapper">
+      <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+      <input type="email" name="email" class="form-input" placeholder="Email address" required>
+    </div>
 
-          <form action="#" class="form" data-form>
+    <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" enabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
+    <button class="form-btn" type="submit">
+      <ion-icon name="paper-plane"></ion-icon>
+      <span>Send Message</span>
+    </button>
+  </form>
+</section>
 
       </article>
 
@@ -1177,6 +1172,7 @@ architecture.<br>
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="contact-form.js"></script>
 
   <!--
     - ionicon link
